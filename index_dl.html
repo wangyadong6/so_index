@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录</title>
+    <link rel="stylesheet" href="css/index_dl.css">
+    <style>
+        .section{
+            background:url(img/0.jpg);
+            background-size:1920px 800px;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <header>登录案例</header>
+    <section class="section">
+        <div class="section_div">
+            <header>
+                <div id="dl" onclick="dl()">登录</div>
+                <div id="zc" onclick="ac()">注册</div>
+            </header>
+            <section>
+                <div id="Adl">
+                    <form action="php/index.php" method="POST">
+                        <input type="text" placeholder="手机号:" id="input_text" name="D_text">
+                        <input type="password" placeholder="密  码：" id="input_password" name="D_password">
+                        <input type="submit" id="input_submit" value="登录" onclick="button1()">
+                    </form>
+                </div>
+                <div id="Azc">
+                    <form action="php/index.php" method="POST">
+                        <input type="text" placeholder="昵称" id="input_text_name" name="input_text_name">
+                        <input type="text" placeholder="手机号/账号:" id="input_text_phone" name="input_text_phone">
+                        <input type="text" placeholder="邮    箱:" id="input_text_email" name="input_text_email">
+                        <input type="password" placeholder="密    码：" id="input_password_1" name="input_password_1">
+                        <input type="password" placeholder="确认密码：" id="input_password_2" name="input_password_2">
+                        <div id="Zyzm">
+                            <img src="php/yzm.php" alt="" onclick="button3()">
+                            <input type="text" placeholder="验证码" id="input_text_yzm" name="input_text_yzm">
+                            <button id="button3">获取验证码</button>
+                        </div>
+                        <input type="submit"  value="注册" onclick="button2()" id="input_submit_z" name="input_submit_z">
+                    </form>
+                </div>
+            </section>
+        </div>
+    </section>
+    <footer></footer>
+</body>
+</html>
+<script src="js/jquery-1.10.2.min_65682a2.js"></script>
+<script>
+    function dl(){
+        $("#Adl").show();
+        $("#Azc").hide();
+        $("#dl").addClass("color");
+        $("#zc").removeClass("color");
+    }
+    function ac(){
+        $("#Adl").hide();
+        $("#Azc").show();
+        $("#dl").removeClass("color");
+        $("#zc").addClass("color");
+    }
+    function button1(){
+        alert("登录成功");
+    }
+    function button2(){
+        alert("注册成功");
+    }
+     function button3(){
+    }
+</script>
